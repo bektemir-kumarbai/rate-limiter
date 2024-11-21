@@ -2,5 +2,5 @@ services:
   RateLimiter\RateLimiter\RateLimiterConfig:
     arguments:
       $maxAttempts: '%rate_limiter.max_attempts%'
-      $intervalInSeconds: '%rate_limiter.interval%'
+      $retryIntervalInSeconds: '%rate_limiter.interval%'
       $blockDurationInSeconds: '%rate_limiter.block_duration%'

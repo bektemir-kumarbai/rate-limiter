@@ -5,23 +5,23 @@ namespace RateLimiter\RateLimiter;
 class RateLimiterConfig
 {
     public function __construct(
-        private int $maxAttempts,
-        private int $retryIntervalInSeconds,
-        private int $blockDurationInSeconds
+        private mixed $maxAttempts,
+        private mixed $retryIntervalInSeconds,
+        private mixed $blockDurationInSeconds
     ) {}
 
     public function getMaxAttempts(): int
     {
-        return $this->maxAttempts;
+        return intval($this->maxAttempts);
     }
 
     public function getRetryInterval(): int
     {
-        return $this->retryIntervalInSeconds;
+        return intval($this->retryIntervalInSeconds);
     }
 
     public function getBlockDuration(): int
     {
-        return $this->blockDurationInSeconds;
+        return intval($this->blockDurationInSeconds);
     }
 }
