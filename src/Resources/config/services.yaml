@@ -4,3 +4,6 @@ services:
       $maxAttempts: '%rate_limiter.max_attempts%'
       $retryIntervalInSeconds: '%rate_limiter.interval%'
       $blockDurationInSeconds: '%rate_limiter.block_duration%'
+  RateLimiter\RateLimiter\RateLimiter:
+    arguments:
+      $redis: '@redis'
