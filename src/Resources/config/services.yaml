@@ -7,3 +7,4 @@ services:
   RateLimiter\RateLimiter\RateLimiter:
     arguments:
       $redis: '@redis'
+      $config: '@RateLimiter\RateLimiter\RateLimiterConfig'
